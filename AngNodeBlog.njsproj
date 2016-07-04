@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>AngNodeBlog</Name>
+    <RootNamespace>NodeDocDb</RootNamespace>
+    <NameOfLastUsedPublishProfile>AngNodeBlog</NameOfLastUsedPublishProfile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>18bcfe1c-4fbb-462c-8824-95b34093a35f</ProjectGuid>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>app.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app.js" />
+    <Compile Include="config.js" />
+    <Compile Include="config\config.js" />
+    <Compile Include="config\lib\app.js" />
+    <Compile Include="config\lib\express.js" />
+    <Compile Include="config\lib\logger.js" />
+    <Compile Include="config\lib\mongoose.js" />
+    <Compile Include="config\lib\multer.js" />
+    <Compile Include="config\lib\seed.js" />
+    <Compile Include="config\lib\socket.io.js" />
+    <Compile Include="models\docdbUtils.js" />
+    <Compile Include="models\taskDao.js" />
+    <Compile Include="modules\articles\client\articles.client.module.js" />
+    <Compile Include="modules\articles\client\config\articles.client.menus.js" />
+    <Compile Include="modules\articles\client\config\articles.client.routes.js" />
+    <Compile Include="modules\articles\client\controllers\articles.client.controller.js" />
+    <Compile Include="modules\articles\client\controllers\list-articles.client.controller.js" />
+    <Compile Include="modules\articles\client\services\articles.client.service.js" />
+    <Compile Include="modules\articles\server\config\articles.server.config.js" />
+    <Compile Include="modules\articles\server\controllers\articles.server.controller.js" />
+    <Compile Include="modules\articles\server\models\article.server.model.js" />
+    <Compile Include="modules\articles\server\policies\articles.server.policy.js" />
+    <Compile Include="modules\articles\server\routes\articles.server.routes.js" />
+    <Compile Include="modules\blogs\client\blogs.client.module.js" />
+    <Compile Include="modules\blogs\client\config\blogs.client.menus.js" />
+    <Compile Include="modules\chat\client\chat.client.module.js" />
+    <Compile Include="modules\chat\client\config\chat.client.menus.js" />
+    <Compile Include="modules\chat\client\config\chat.client.routes.js" />
+    <Compile Include="modules\chat\client\controllers\chat.client.controller.js" />
+    <Compile Include="modules\chat\server\sockets\chat.server.socket.config.js" />
+    <Compile Include="modules\core\client\app\config.js" />
+    <Compile Include="modules\core\client\app\init.js" />
+    <Compile Include="modules\core\client\config\core-admin.client.menus.js" />
+    <Compile Include="modules\core\client\config\core-admin.client.routes.js" />
+    <Compile Include="modules\core\client\config\core.client.menus.js" />
+    <Compile Include="modules\core\client\config\core.client.route-filter.js" />
+    <Compile Include="modules\core\client\config\core.client.routes.js" />
+    <Compile Include="modules\core\client\controllers\header.client.controller.js" />
+    <Compile Include="modules\core\client\controllers\home.client.controller.js" />
+    <Compile Include="modules\core\client\core.client.module.js" />
+    <Compile Include="modules\core\client\directives\page-title.client.directives.js" />
+    <Compile Include="modules\core\client\directives\show-errors.client.directives.js" />
+    <Compile Include="modules\core\client\services\interceptors\auth-interceptor.client.service.js" />
+    <Compile Include="modules\core\client\services\menu.client.service.js" />
+    <Compile Include="modules\core\client\services\socket.io.client.service.js" />
+    <Compile Include="modules\core\server\controllers\core.server.controller.js" />
+    <Compile Include="modules\core\server\controllers\errors.server.controller.js" />
+    <Compile Include="modules\core\server\routes\core.server.routes.js" />
+    <Compile Include="modules\core\tests\client\core.client.tests.js" />
+    <Compile Include="modules\core\tests\client\header.client.controller.tests.js" />
+    <Compile Include="modules\core\tests\client\home.client.controller.tests.js" />
+    <Compile Include="modules\core\tests\client\menus.client.service.tests.js" />
+    <Compile Include="modules\core\tests\client\socket.io.client.service.tests.js" />
+    <Compile Include="modules\core\tests\server\core.server.config.tests.js" />
+    <Compile Include="modules\tasks\client\config\tasks.client.menus.js" />
+    <Compile Include="modules\tasks\client\config\tasks.client.routes.js" />
+    <Compile Include="modules\tasks\client\controllers\tasks.client.controller.js" />
+    <Compile Include="modules\tasks\client\controllers\list-tasks.client.controller.js" />
+    <Compile Include="modules\tasks\client\services\tasks.client.service.js" />
+    <Compile Include="modules\tasks\client\tasks.client.module.js" />
+    <Compile Include="modules\tasks\server\config\tasks.server.config.js" />
+    <Compile Include="modules\tasks\server\controllers\tasks.server.controller.js" />
+    <Compile Include="modules\tasks\server\models\task.server.model.js" />
+    <Compile Include="modules\tasks\server\policies\tasks.server.policy.js" />
+    <Compile Include="modules\tasks\server\routes\tasks.server.routes.js" />
+    <Compile Include="modules\users\client\config\users-admin.client.menus.js" />
+    <Compile Include="modules\users\client\config\users-admin.client.routes.js" />
+    <Compile Include="modules\users\client\config\users.client.routes.js" />
+    <Compile Include="modules\users\client\controllers\admin\list-users.client.controller.js" />
+    <Compile Include="modules\users\client\controllers\admin\user.client.controller.js" />
+    <Compile Include="modules\users\client\controllers\authentication.client.controller.js" />
+    <Compile Include="modules\users\client\controllers\password.client.controller.js" />
+    <Compile Include="modules\users\client\controllers\settings\change-password.client.controller.js" />
+    <Compile Include="modules\users\client\controllers\settings\change-profile-picture.client.controller.js" />
+    <Compile Include="modules\users\client\controllers\settings\edit-profile.client.controller.js" />
+    <Compile Include="modules\users\client\controllers\settings\manage-social-accounts.client.controller.js" />
+    <Compile Include="modules\users\client\controllers\settings\settings.client.controller.js" />
+    <Compile Include="modules\users\client\directives\password-validator.client.directive.js" />
+    <Compile Include="modules\users\client\directives\password-verify.client.directive.js" />
+    <Compile Include="modules\users\client\directives\users.client.directive.js" />
+    <Compile Include="modules\users\client\services\authentication.client.service.js" />
+    <Compile Include="modules\users\client\services\password-validator.client.service.js" />
+    <Compile Include="modules\users\client\services\users.client.service.js" />
+    <Compile Include="modules\users\client\users.client.module.js" />
+    <Compile Include="modules\users\server\config\strategies\facebook.js" />
+    <Compile Include="modules\users\server\config\strategies\github.js" />
+    <Compile Include="modules\users\server\config\strategies\google.js" />
+    <Compile Include="modules\users\server\config\strategies\linkedin.js" />
+    <Compile Include="modules\users\server\config\strategies\local.js" />
+    <Compile Include="modules\users\server\config\strategies\paypal.js" />
+    <Compile Include="modules\users\server\config\strategies\twitter.js" />
+    <Compile Include="modules\users\server\config\users.server.config.js" />
+    <Compile Include="modules\users\server\controllers\admin.server.controller.js" />
+    <Compile Include="modules\users\server\controllers\users.server.controller.js" />
+    <Compile Include="modules\users\server\controllers\users\users.authentication.server.controller.js" />
+    <Compile Include="modules\users\server\controllers\users\users.authorization.server.controller.js" />
+    <Compile Include="modules\users\server\controllers\users\users.password.server.controller.js" />
+    <Compile Include="modules\users\server\controllers\users\users.profile.server.controller.js" />
+    <Compile Include="modules\users\server\models\user.server.model.js" />
+    <Compile Include="modules\users\server\policies\admin.server.policy.js" />
+    <Compile Include="modules\users\server\routes\admin.server.routes.js" />
+    <Compile Include="modules\users\server\routes\auth.server.routes.js" />
+    <Compile Include="modules\users\server\routes\users.server.routes.js" />
+    <Compile Include="routes\index.js" />
+    <Compile Include="routes\tasklist.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AngNodeBlog.pubxml" />
+    <Content Include="modules\articles\client\views\form-article.client.view.html" />
+    <Content Include="modules\articles\client\views\list-articles.client.view.html" />
+    <Content Include="modules\articles\client\views\view-article.client.view.html" />
+    <Content Include="modules\chat\client\css\chat.css" />
+    <Content Include="modules\chat\client\views\chat.client.view.html" />
+    <Content Include="modules\core\client\css\core.css" />
+    <Content Include="modules\core\client\img\brand\favicon.ico" />
+    <Content Include="modules\core\client\img\brand\logo.png" />
+    <Content Include="modules\core\client\img\loaders\loader.gif" />
+    <Content Include="modules\core\client\views\400.client.view.html" />
+    <Content Include="modules\core\client\views\403.client.view.html" />
+    <Content Include="modules\core\client\views\404.client.view.html" />
+    <Content Include="modules\core\client\views\header.client.view.html" />
+    <Content Include="modules\core\client\views\home.client.view.html" />
+    <Content Include="modules\core\server\views\404.server.view.html" />
+    <Content Include="modules\core\server\views\500.server.view.html" />
+    <Content Include="modules\core\server\views\index.server.view.html" />
+    <Content Include="modules\core\server\views\layout.server.view.html" />
+    <Content Include="modules\tasks\client\views\form-task.client.view.html" />
+    <Content Include="modules\tasks\client\views\list-tasks.client.view.html" />
+    <Content Include="modules\tasks\client\views\view-task.client.view.html" />
+    <Content Include="modules\users\client\css\users.css" />
+    <Content Include="modules\users\client\img\buttons\facebook.png" />
+    <Content Include="modules\users\client\img\buttons\github.png" />
+    <Content Include="modules\users\client\img\buttons\google.png" />
+    <Content Include="modules\users\client\img\buttons\linkedin.png" />
+    <Content Include="modules\users\client\img\buttons\paypal.png" />
+    <Content Include="modules\users\client\img\buttons\twitter.png" />
+    <Content Include="modules\users\client\img\profile\default.png" />
+    <Content Include="modules\users\client\views\admin\edit-user.client.view.html" />
+    <Content Include="modules\users\client\views\admin\list-users.client.view.html" />
+    <Content Include="modules\users\client\views\admin\view-user.client.view.html" />
+    <Content Include="modules\users\client\views\authentication\authentication.client.view.html" />
+    <Content Include="modules\users\client\views\authentication\signin.client.view.html" />
+    <Content Include="modules\users\client\views\authentication\signup.client.view.html" />
+    <Content Include="modules\users\client\views\password\forgot-password.client.view.html" />
+    <Content Include="modules\users\client\views\password\reset-password-invalid.client.view.html" />
+    <Content Include="modules\users\client\views\password\reset-password-success.client.view.html" />
+    <Content Include="modules\users\client\views\password\reset-password.client.view.html" />
+    <Content Include="modules\users\client\views\settings\change-password.client.view.html" />
+    <Content Include="modules\users\client\views\settings\change-profile-picture.client.view.html" />
+    <Content Include="modules\users\client\views\settings\edit-profile.client.view.html" />
+    <Content Include="modules\users\client\views\settings\manage-social-accounts.client.view.html" />
+    <Content Include="modules\users\client\views\settings\settings.client.view.html" />
+    <Content Include="modules\users\server\templates\reset-password-confirm-email.server.view.html" />
+    <Content Include="modules\users\server\templates\reset-password-email.server.view.html" />
+    <Content Include="public\javascripts\bootstrap.js" />
+    <Content Include="public\javascripts\bootstrap.min.js" />
+    <Content Include="public\javascripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="public\javascripts\jquery-1.10.2.js" />
+    <Content Include="public\javascripts\jquery-1.10.2.min.js" />
+    <Content Include="public\javascripts\jquery.validate-vsdoc.js" />
+    <Content Include="public\javascripts\jquery.validate.js" />
+    <Content Include="public\javascripts\jquery.validate.min.js" />
+    <Content Include="public\javascripts\jquery.validate.unobtrusive.js" />
+    <Content Include="public\javascripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="public\javascripts\modernizr-2.6.2.js" />
+    <Content Include="public\javascripts\respond.js" />
+    <Content Include="public\javascripts\respond.min.js" />
+    <Content Include="public\javascripts\_references.js" />
+    <Content Include="package.json" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="public\javascripts\jquery-1.10.2.min.map" />
+    <Content Include="public\stylesheets\bootstrap.css" />
+    <Content Include="public\stylesheets\bootstrap.min.css" />
+    <Content Include="public\stylesheets\style.css" />
+    <Content Include="public\stylesheets\style.styl" />
+    <Content Include="README.md" />
+    <Content Include="typings.json" />
+    <Content Include="views\contact.jade" />
+    <Content Include="views\about.jade" />
+    <Content Include="views\index.jade" />
+    <Content Include="views\layout.jade" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config" />
+    <Content Include="bin\ChangeConfig.ps1" />
+    <Content Include="bin\download.ps1" />
+    <Content Include="bin\setup_web.cmd" />
+    <Content Include="bin\node.cmd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="config\lib\" />
+    <Folder Include="models\" />
+    <Folder Include="modules\" />
+    <Folder Include="modules\articles\" />
+    <Folder Include="modules\articles\client\" />
+    <Folder Include="modules\articles\client\config\" />
+    <Folder Include="modules\articles\client\controllers\" />
+    <Folder Include="modules\articles\client\services\" />
+    <Folder Include="modules\articles\client\views\" />
+    <Folder Include="modules\articles\server\" />
+    <Folder Include="modules\articles\server\config\" />
+    <Folder Include="modules\articles\server\controllers\" />
+    <Folder Include="modules\articles\server\models\" />
+    <Folder Include="modules\articles\server\policies\" />
+    <Folder Include="modules\articles\server\routes\" />
+    <Folder Include="modules\blogs\" />
+    <Folder Include="modules\blogs\client\" />
+    <Folder Include="modules\blogs\client\config\" />
+    <Folder Include="modules\chat\" />
+    <Folder Include="modules\chat\client\" />
+    <Folder Include="modules\chat\client\config\" />
+    <Folder Include="modules\chat\client\controllers\" />
+    <Folder Include="modules\chat\client\css\" />
+    <Folder Include="modules\chat\client\views\" />
+    <Folder Include="modules\chat\server\" />
+    <Folder Include="modules\chat\server\sockets\" />
+    <Folder Include="modules\core\" />
+    <Folder Include="modules\core\client\" />
+    <Folder Include="modules\core\client\app\" />
+    <Folder Include="modules\core\client\config\" />
+    <Folder Include="modules\core\client\controllers\" />
+    <Folder Include="modules\core\client\css\" />
+    <Folder Include="modules\core\client\directives\" />
+    <Folder Include="modules\core\client\img\" />
+    <Folder Include="modules\core\client\img\brand\" />
+    <Folder Include="modules\core\client\img\loaders\" />
+    <Folder Include="modules\core\client\services\" />
+    <Folder Include="modules\core\client\services\interceptors\" />
+    <Folder Include="modules\core\client\views\" />
+    <Folder Include="modules\core\server\" />
+    <Folder Include="modules\core\server\controllers\" />
+    <Folder Include="modules\core\server\routes\" />
+    <Folder Include="modules\core\server\views\" />
+    <Folder Include="modules\core\tests\server\" />
+    <Folder Include="modules\tasks\" />
+    <Folder Include="modules\tasks\client\" />
+    <Folder Include="modules\tasks\client\config\" />
+    <Folder Include="modules\tasks\client\controllers\" />
+    <Folder Include="modules\tasks\client\views\" />
+    <Folder Include="modules\tasks\client\services\" />
+    <Folder Include="modules\tasks\server\" />
+    <Folder Include="modules\tasks\server\config\" />
+    <Folder Include="modules\tasks\server\controllers\" />
+    <Folder Include="modules\tasks\server\models\" />
+    <Folder Include="modules\tasks\server\policies\" />
+    <Folder Include="modules\tasks\server\routes\" />
+    <Folder Include="modules\users\" />
+    <Folder Include="modules\users\client\" />
+    <Folder Include="modules\users\client\config\" />
+    <Folder Include="modules\users\client\controllers\" />
+    <Folder Include="modules\users\client\controllers\admin\" />
+    <Folder Include="modules\users\client\controllers\settings\" />
+    <Folder Include="modules\users\client\css\" />
+    <Folder Include="modules\users\client\directives\" />
+    <Folder Include="modules\users\client\img\" />
+    <Folder Include="modules\users\client\img\buttons\" />
+    <Folder Include="modules\users\client\img\profile\" />
+    <Folder Include="modules\users\client\img\profile\uploads\" />
+    <Folder Include="modules\users\client\services\" />
+    <Folder Include="modules\users\client\views\" />
+    <Folder Include="modules\users\client\views\admin\" />
+    <Folder Include="modules\users\client\views\authentication\" />
+    <Folder Include="modules\users\client\views\password\" />
+    <Folder Include="modules\users\client\views\settings\" />
+    <Folder Include="modules\users\server\" />
+    <Folder Include="modules\users\server\config\" />
+    <Folder Include="modules\users\server\config\strategies\" />
+    <Folder Include="modules\users\server\controllers\" />
+    <Folder Include="modules\users\server\controllers\users\" />
+    <Folder Include="modules\users\server\models\" />
+    <Folder Include="modules\users\server\policies\" />
+    <Folder Include="modules\users\server\routes\" />
+    <Folder Include="modules\users\server\templates\" />
+    <Folder Include="config\" />
+    <Folder Include="public\" />
+    <Folder Include="public\fonts\" />
+    <Folder Include="public\images\" />
+    <Folder Include="public\javascripts\" />
+    <Folder Include="public\stylesheets\" />
+    <Folder Include="routes\" />
+    <Folder Include="typings\" />
+    <Folder Include="typings\globals\" />
+    <Folder Include="typings\globals\async\" />
+    <Folder Include="typings\globals\body-parser\" />
+    <Folder Include="typings\globals\cookie-parser\" />
+    <Folder Include="typings\globals\documentdb\" />
+    <Folder Include="typings\globals\express\" />
+    <Folder Include="typings\globals\jade\" />
+    <Folder Include="typings\globals\morgan\" />
+    <Folder Include="typings\globals\node\" />
+    <Folder Include="typings\globals\serve-favicon\" />
+    <Folder Include="typings\globals\stylus\" />
+    <Folder Include="views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="typings\globals\async\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\body-parser\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\cookie-parser\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\documentdb\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\express\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\jade\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\morgan\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\node\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\serve-favicon\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\stylus\index.d.ts" />
+    <TypeScriptCompile Include="typings\index.d.ts" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
